@@ -1,5 +1,3 @@
-// src/features/consents/hooks/vacunaFormData.ts
-
 export type VacunaFormData = {
   city: string;
   day: string;
