@@ -1,4 +1,4 @@
-export type VacunaFormData = {
+export interface VacunaFormData {
   city: string;
   day: string;
   month: string;
