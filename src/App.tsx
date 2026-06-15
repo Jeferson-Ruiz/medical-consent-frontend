@@ -1,15 +1,12 @@
 import './App.css'
 import HeaderInfo from './components/header/HeaderInfo';
-import ListConsents from './components/listOfConsents /ListConsents';
-import type { ConsentType } from './constants/consentType';
+import { ConsentPage } from './features/consents/pages/ConsentPage';
 
 function App() {
   return (
     <>
       <HeaderInfo/>
-      <ListConsents onChange={function (value: ConsentType): void {
-        throw new Error('Function not implemented.');
-      } }/>
+      <ConsentPage />;
     </>
   );
 }
