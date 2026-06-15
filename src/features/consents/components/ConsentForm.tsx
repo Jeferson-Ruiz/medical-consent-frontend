@@ -5,6 +5,7 @@ import { SelectField } from './fields/SelectField';
 import { BooleanField } from './fields/BooleanField';
 import type { ConsentConfig, FieldConfig } from '../type/consentTypes';
 import { useConsentForm } from '../../hooks/useConsentForm';
+import { FormButton } from '../../../components/ui/FormButton';
 
 interface ConsentFormProps {
   config: ConsentConfig;
@@ -33,9 +34,10 @@ export function ConsentForm({ config }: ConsentFormProps) {
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto p-6 flex flex-col gap-4">
         <h2 className="text-xl font-bold">{config.title}</h2>
         {config.fields.map(renderField)}
-        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-          Generar consentimiento
-        </button>
+        <FormButton
+          label='Generar consentimiento'
+          type='submit'
+        />
       </form>
     </FormProvider>
   );
